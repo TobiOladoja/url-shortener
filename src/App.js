@@ -5,7 +5,7 @@ import Search from './components/Search';
 
 function App() {
   return (
-    <Grid className="App" container direction="column" justify="center" alignItems="center">
+    <Grid className="App" container direction="column" justifyContent="center" alignItems="center">
       <Search />
     </Grid>
   );
