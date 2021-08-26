@@ -21,7 +21,7 @@ const Search = () => {
         await shrtcode
         .get(`shorten?url=${link}`)
         .then((response) => {
-            console.log(response.data.result.short_link)
+            setShort(response.data.result.short_link)
         })
         .catch((error) => {
             console.log(error)
@@ -42,6 +42,9 @@ const Search = () => {
             <Button onClick={handleSubmit} variant="contained" color="primary">
                 Submit
             </Button>
+            {short && <div> Short Link: {short}</div>}
+        
+
         </>
     )
 }
